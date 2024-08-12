@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --account=scec_608
+#SBATCH --partition=main
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=64G
+#SBATCH --time=20:00:00
+
+module load gnuplot
+module load gcc/12.3.0
+
+./run_test.sh
